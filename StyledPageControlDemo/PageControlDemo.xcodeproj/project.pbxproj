@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8B2E731137ED3C500338230 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B2E730137ED3C500338230 /* UIKit.framework */; };
+		F8B2E733137ED3C500338230 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B2E732137ED3C500338230 /* Foundation.framework */; };
+		F8B2E735137ED3C500338230 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B2E734137ED3C500338230 /* CoreGraphics.framework */; };
+		F8B2E73B137ED3C500338230 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8B2E739137ED3C500338230 /* InfoPlist.strings */; };
+		F8B2E73E137ED3C500338230 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B2E73D137ED3C500338230 /* main.m */; };
+		F8B2E741137ED3C500338230 /* PageControlDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B2E740137ED3C500338230 /* PageControlDemoAppDelegate.m */; };
+		F8B2E745137ED3C500338230 /* PageControlDemoAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B2E744137ED3C500338230 /* PageControlDemoAppDelegate_iPhone.m */; };
+		F8B2E748137ED3C500338230 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8B2E746137ED3C500338230 /* MainWindow_iPhone.xib */; };
+		F8B2E74C137ED3C500338230 /* PageControlDemoAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B2E74B137ED3C500338230 /* PageControlDemoAppDelegate_iPad.m */; };
+		F8B2E74F137ED3C500338230 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8B2E74D137ED3C500338230 /* MainWindow_iPad.xib */; };
+		F8B2E758137ED42000338230 /* StyledPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B2E757137ED42000338230 /* StyledPageControl.m */; };
+		F8B2E75B137ED5EB00338230 /* PageControlDemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B2E75A137ED5EB00338230 /* PageControlDemoListViewController.m */; };
+		F8B2E75E137EDA8800338230 /* PageControlDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B2E75D137EDA8800338230 /* PageControlDemoTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F8B2E72C137ED3C500338230 /* PageControlDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageControlDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B2E730137ED3C500338230 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F8B2E732137ED3C500338230 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F8B2E734137ED3C500338230 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F8B2E738137ED3C500338230 /* PageControlDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PageControlDemo-Info.plist"; sourceTree = "<group>"; };
+		F8B2E73A137ED3C500338230 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F8B2E73C137ED3C500338230 /* PageControlDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PageControlDemo-Prefix.pch"; sourceTree = "<group>"; };
+		F8B2E73D137ED3C500338230 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F8B2E73F137ED3C500338230 /* PageControlDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageControlDemoAppDelegate.h; sourceTree = "<group>"; };
+		F8B2E740137ED3C500338230 /* PageControlDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageControlDemoAppDelegate.m; sourceTree = "<group>"; };
+		F8B2E743137ED3C500338230 /* PageControlDemoAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PageControlDemoAppDelegate_iPhone.h; path = iPhone/PageControlDemoAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		F8B2E744137ED3C500338230 /* PageControlDemoAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PageControlDemoAppDelegate_iPhone.m; path = iPhone/PageControlDemoAppDelegate_iPhone.m; sourceTree = "<group>"; };
+		F8B2E747137ED3C500338230 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		F8B2E74A137ED3C500338230 /* PageControlDemoAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PageControlDemoAppDelegate_iPad.h; path = iPad/PageControlDemoAppDelegate_iPad.h; sourceTree = "<group>"; };
+		F8B2E74B137ED3C500338230 /* PageControlDemoAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PageControlDemoAppDelegate_iPad.m; path = iPad/PageControlDemoAppDelegate_iPad.m; sourceTree = "<group>"; };
+		F8B2E74E137ED3C500338230 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		F8B2E756137ED42000338230 /* StyledPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyledPageControl.h; sourceTree = "<group>"; };
+		F8B2E757137ED42000338230 /* StyledPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledPageControl.m; sourceTree = "<group>"; };
+		F8B2E759137ED5EB00338230 /* PageControlDemoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageControlDemoListViewController.h; sourceTree = "<group>"; };
+		F8B2E75A137ED5EB00338230 /* PageControlDemoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageControlDemoListViewController.m; sourceTree = "<group>"; };
+		F8B2E75C137EDA8800338230 /* PageControlDemoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageControlDemoTableViewCell.h; sourceTree = "<group>"; };
+		F8B2E75D137EDA8800338230 /* PageControlDemoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageControlDemoTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8B2E729137ED3C400338230 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B2E731137ED3C500338230 /* UIKit.framework in Frameworks */,
+				F8B2E733137ED3C500338230 /* Foundation.framework in Frameworks */,
+				F8B2E735137ED3C500338230 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8B2E721137ED3C400338230 = {
+			isa = PBXGroup;
+			children = (
+				F8B2E736137ED3C500338230 /* PageControlDemo */,
+				F8B2E72F137ED3C500338230 /* Frameworks */,
+				F8B2E72D137ED3C500338230 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8B2E72D137ED3C500338230 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8B2E72C137ED3C500338230 /* PageControlDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8B2E72F137ED3C500338230 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8B2E730137ED3C500338230 /* UIKit.framework */,
+				F8B2E732137ED3C500338230 /* Foundation.framework */,
+				F8B2E734137ED3C500338230 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8B2E736137ED3C500338230 /* PageControlDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F8B2E73F137ED3C500338230 /* PageControlDemoAppDelegate.h */,
+				F8B2E740137ED3C500338230 /* PageControlDemoAppDelegate.m */,
+				F8B2E759137ED5EB00338230 /* PageControlDemoListViewController.h */,
+				F8B2E75A137ED5EB00338230 /* PageControlDemoListViewController.m */,
+				F8B2E75C137EDA8800338230 /* PageControlDemoTableViewCell.h */,
+				F8B2E75D137EDA8800338230 /* PageControlDemoTableViewCell.m */,
+				F8B2E755137ED40800338230 /* PageControl */,
+				F8B2E742137ED3C500338230 /* iPhone */,
+				F8B2E749137ED3C500338230 /* iPad */,
+				F8B2E737137ED3C500338230 /* Supporting Files */,
+			);
+			path = PageControlDemo;
+			sourceTree = "<group>";
+		};
+		F8B2E737137ED3C500338230 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8B2E738137ED3C500338230 /* PageControlDemo-Info.plist */,
+				F8B2E739137ED3C500338230 /* InfoPlist.strings */,
+				F8B2E73C137ED3C500338230 /* PageControlDemo-Prefix.pch */,
+				F8B2E73D137ED3C500338230 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8B2E742137ED3C500338230 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				F8B2E743137ED3C500338230 /* PageControlDemoAppDelegate_iPhone.h */,
+				F8B2E744137ED3C500338230 /* PageControlDemoAppDelegate_iPhone.m */,
+				F8B2E746137ED3C500338230 /* MainWindow_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		F8B2E749137ED3C500338230 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				F8B2E74A137ED3C500338230 /* PageControlDemoAppDelegate_iPad.h */,
+				F8B2E74B137ED3C500338230 /* PageControlDemoAppDelegate_iPad.m */,
+				F8B2E74D137ED3C500338230 /* MainWindow_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		F8B2E755137ED40800338230 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				F8B2E756137ED42000338230 /* StyledPageControl.h */,
+				F8B2E757137ED42000338230 /* StyledPageControl.m */,
+			);
+			name = PageControl;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8B2E72B137ED3C400338230 /* PageControlDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8B2E752137ED3C500338230 /* Build configuration list for PBXNativeTarget "PageControlDemo" */;
+			buildPhases = (
+				F8B2E728137ED3C400338230 /* Sources */,
+				F8B2E729137ED3C400338230 /* Frameworks */,
+				F8B2E72A137ED3C400338230 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PageControlDemo;
+			productName = PageControlDemo;
+			productReference = F8B2E72C137ED3C500338230 /* PageControlDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8B2E723137ED3C400338230 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "BuUuK Pte Ltd";
+			};
+			buildConfigurationList = F8B2E726137ED3C400338230 /* Build configuration list for PBXProject "PageControlDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F8B2E721137ED3C400338230;
+			productRefGroup = F8B2E72D137ED3C500338230 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8B2E72B137ED3C400338230 /* PageControlDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8B2E72A137ED3C400338230 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B2E73B137ED3C500338230 /* InfoPlist.strings in Resources */,
+				F8B2E748137ED3C500338230 /* MainWindow_iPhone.xib in Resources */,
+				F8B2E74F137ED3C500338230 /* MainWindow_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8B2E728137ED3C400338230 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B2E73E137ED3C500338230 /* main.m in Sources */,
+				F8B2E741137ED3C500338230 /* PageControlDemoAppDelegate.m in Sources */,
+				F8B2E745137ED3C500338230 /* PageControlDemoAppDelegate_iPhone.m in Sources */,
+				F8B2E74C137ED3C500338230 /* PageControlDemoAppDelegate_iPad.m in Sources */,
+				F8B2E758137ED42000338230 /* StyledPageControl.m in Sources */,
+				F8B2E75B137ED5EB00338230 /* PageControlDemoListViewController.m in Sources */,
+				F8B2E75E137EDA8800338230 /* PageControlDemoTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F8B2E739137ED3C500338230 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8B2E73A137ED3C500338230 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F8B2E746137ED3C500338230 /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8B2E747137ED3C500338230 /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		F8B2E74D137ED3C500338230 /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8B2E74E137ED3C500338230 /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8B2E750137ED3C500338230 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8B2E751137ED3C500338230 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F8B2E753137ED3C500338230 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PageControlDemo/PageControlDemo-Prefix.pch";
+				INFOPLIST_FILE = "PageControlDemo/PageControlDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F8B2E754137ED3C500338230 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PageControlDemo/PageControlDemo-Prefix.pch";
+				INFOPLIST_FILE = "PageControlDemo/PageControlDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8B2E726137ED3C400338230 /* Build configuration list for PBXProject "PageControlDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B2E750137ED3C500338230 /* Debug */,
+				F8B2E751137ED3C500338230 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8B2E752137ED3C500338230 /* Build configuration list for PBXNativeTarget "PageControlDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B2E753137ED3C500338230 /* Debug */,
+				F8B2E754137ED3C500338230 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8B2E723137ED3C400338230 /* Project object */;
+}
