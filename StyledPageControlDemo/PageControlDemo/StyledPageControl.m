@@ -190,16 +190,16 @@
         {
             if (i==_currentPage)
             {
-                CGContextSetFillColor(myContext, CGColorGetComponents([_coreSelectedColor CGColor]));
+                CGContextSetFillColorWithColor(myContext, [_coreSelectedColor CGColor]);
                 CGContextFillEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
-                CGContextSetStrokeColor(myContext, CGColorGetComponents([_strokeSelectedColor CGColor]));
+                CGContextSetStrokeColorWithColor(myContext, [_strokeSelectedColor CGColor]);
                 CGContextStrokeEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
             }
             else
             {
-                CGContextSetFillColor(myContext, CGColorGetComponents([_coreNormalColor CGColor]));
+                CGContextSetFillColorWithColor(myContext, [_coreNormalColor CGColor]);
                 CGContextFillEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
-                CGContextSetStrokeColor(myContext, CGColorGetComponents([_strokeNormalColor CGColor]));
+                CGContextSetStrokeColorWithColor(myContext, [_strokeNormalColor CGColor]);
                 CGContextStrokeEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
             }
         }
@@ -208,14 +208,14 @@
             CGContextSetLineWidth(myContext, self._strokeWidth);
             if (i==_currentPage)
             {
-                CGContextSetFillColor(myContext, CGColorGetComponents([_coreSelectedColor CGColor]));
+                CGContextSetFillColorWithColor(myContext, [_coreSelectedColor CGColor]);
                 CGContextFillEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
-                CGContextSetStrokeColor(myContext, CGColorGetComponents([_strokeSelectedColor CGColor]));
+                CGContextSetStrokeColorWithColor(myContext, [strokeSelectedColor CGColor]);
                 CGContextStrokeEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
             }
             else
             {
-                CGContextSetStrokeColor(myContext, CGColorGetComponents([_strokeNormalColor CGColor]));
+                CGContextSetStrokeColorWithColor(myContext, [_strokeNormalColor CGColor]);
                 CGContextStrokeEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
             }
         }
@@ -223,28 +223,28 @@
         {
             if (self._pageControlStyle==PageControlStylePressed1)
             {
-                CGContextSetFillColor(myContext, CGColorGetComponents([[UIColor colorWithRed:0 green:0 blue:0 alpha:1] CGColor]));
+                CGContextSetFillColorWithColor(myContext, [[UIColor colorWithRed:0 green:0 blue:0 alpha:1] CGColor]);
                 CGContextFillEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2-1,_diameter,_diameter));
             }
             else if (self._pageControlStyle==PageControlStylePressed2)
             {
-                CGContextSetFillColor(myContext, CGColorGetComponents([[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1] CGColor]));
+                CGContextSetFillColorWithColor(myContext, [[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1] CGColor]);
                 CGContextFillEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2+1,_diameter,_diameter));
             }
             
             
             if (i==_currentPage)
             {
-                CGContextSetFillColor(myContext, CGColorGetComponents([_coreSelectedColor CGColor]));
+                CGContextSetFillColorWithColor(myContext, [_coreSelectedColor CGColor]);
                 CGContextFillEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
-                CGContextSetStrokeColor(myContext, CGColorGetComponents([_strokeSelectedColor CGColor]));
+                CGContextSetStrokeColorWithColor(myContext, [_strokeSelectedColor CGColor]);
                 CGContextStrokeEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
             }
             else
             {
-                CGContextSetFillColor(myContext, CGColorGetComponents([_coreNormalColor CGColor]));
+                CGContextSetFillColorWithColor(myContext, [_coreNormalColor CGColor]);
                 CGContextFillEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
-                CGContextSetStrokeColor(myContext, CGColorGetComponents([_strokeNormalColor CGColor]));
+                CGContextSetStrokeColorWithColor(myContext, [_strokeNormalColor CGColor]);
                 CGContextStrokeEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
             }
         }
