@@ -210,7 +210,7 @@
             {
                 CGContextSetFillColorWithColor(myContext, [_coreSelectedColor CGColor]);
                 CGContextFillEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
-                CGContextSetStrokeColorWithColor(myContext, [strokeSelectedColor CGColor]);
+                CGContextSetStrokeColorWithColor(myContext, [_strokeSelectedColor CGColor]);
                 CGContextStrokeEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
             }
             else
