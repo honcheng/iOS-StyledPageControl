@@ -85,7 +85,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -103,6 +103,10 @@
         return 1;
     }
     else if (section==3)
+    {
+        return 1;
+    }
+    else if (section==4)
     {
         return 1;
     }
@@ -126,6 +130,10 @@
     else if (section==3)
     {
         return @"PageControlStylePressed2";
+    }
+    else if (section==4)
+    {
+        return @"PageControlStyleWithPageNumber";
     }
     else return nil;
 }
@@ -182,6 +190,12 @@
         [cell.pageControl setPageControlStyle:PageControlStylePressed2];
         [cell.pageControl setBackgroundColor:[UIColor darkGrayColor]];
     }
+    else if (indexPath.section==4)
+    {
+        [cell.pageControl setPageControlStyle:PageControlStyleWithPageNumber];
+        [cell.pageControl setNumberOfPages:14];
+    }
+
     
     return cell;
 }

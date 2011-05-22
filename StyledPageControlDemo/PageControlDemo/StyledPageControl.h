@@ -40,7 +40,8 @@ typedef enum
     PageControlStyleDefault = 0,
     PageControlStyleStrokedCircle = 1,
     PageControlStylePressed1 = 2,
-    PageControlStylePressed2 = 3
+    PageControlStylePressed2 = 3,
+    PageControlStyleWithPageNumber = 4
 } PageControlStyle;
 
 @interface StyledPageControl : UIControl {
