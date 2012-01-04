@@ -41,6 +41,7 @@
 @synthesize coreNormalColor, coreSelectedColor;
 @synthesize strokeNormalColor, strokeSelectedColor;
 @synthesize _pageControlStyle, _strokeWidth, diameter, gapWidth;
+@synthesize thumbImage, selectedThumbImage;
 
 #define COLOR_GRAYISHBLUE [UIColor colorWithRed:128/255.0 green:130/255.0 blue:133/255.0 alpha:1]
 #define COLOR_GRAY [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]
@@ -150,6 +151,14 @@
 	
 	int gap = self.gapWidth;
     float _diameter = self.diameter - 2*self._strokeWidth;
+    
+    if (self.pageControlStyle==PageControlStyleThumb)
+    {
+        if (self.thumbImage && self.selectedThumbImage)
+        {
+            _diameter = self.thumbImage.size.width;
+        }
+    }
 	
 	int total_width = self._numberOfPages*_diameter + (self._numberOfPages-1)*gap;
 	
@@ -268,6 +277,20 @@
                 CGContextFillEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
                 CGContextSetStrokeColorWithColor(myContext, [_strokeNormalColor CGColor]);
                 CGContextStrokeEllipseInRect(myContext, CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter));
+            }
+        }
+        else if (self.pageControlStyle==PageControlStyleThumb)
+        {
+            if (self.thumbImage && self.selectedThumbImage)
+            {
+                if (i==_currentPage)
+                {
+                    [self.selectedThumbImage drawInRect:CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter)];
+                }
+                else
+                {
+                    [self.thumbImage drawInRect:CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter)];
+                }
             }
         }
 	}

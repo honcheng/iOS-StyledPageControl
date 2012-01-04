@@ -41,7 +41,8 @@ typedef enum
     PageControlStyleStrokedCircle = 1,
     PageControlStylePressed1 = 2,
     PageControlStylePressed2 = 3,
-    PageControlStyleWithPageNumber = 4
+    PageControlStyleWithPageNumber = 4,
+    PageControlStyleThumb = 5
 } PageControlStyle;
 
 @interface StyledPageControl : UIControl {
@@ -59,6 +60,7 @@ typedef enum
 @property (nonatomic, assign) BOOL hidesForSinglePage;
 @property (nonatomic, assign) PageControlStyle _pageControlStyle;
 @property (nonatomic, assign) int _strokeWidth, diameter, gapWidth;
+@property (nonatomic, retain) UIImage *thumbImage, *selectedThumbImage;
 
 - (void)setCurrentPage:(int)page;
 - (int)currentPage;
