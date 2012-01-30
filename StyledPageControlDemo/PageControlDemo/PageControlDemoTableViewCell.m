@@ -23,7 +23,7 @@
         [self.contentView addSubview:self.pageControl];
         [self.pageControl release];
         
-        [self setSelectionStyle:UITableViewCellEditingStyleNone];
+        [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;
 }
@@ -31,7 +31,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    [self.pageControl setFrame:CGRectMake(20,10,self.frame.size.width-40,20)];
+    [self.pageControl setFrame:CGRectMake(20,(self.frame.size.height-20)/2,self.frame.size.width-40,20)];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

@@ -85,7 +85,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 5;
+    return 6;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -107,6 +107,10 @@
         return 1;
     }
     else if (section==4)
+    {
+        return 1;
+    }
+    else if (section==5)
     {
         return 1;
     }
@@ -135,12 +139,16 @@
     {
         return @"PageControlStyleWithPageNumber";
     }
+    else if (section==5)
+    {
+        return @"PageControlStyleThumb";
+    }
     else return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 40;
+    return 34;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -195,7 +203,13 @@
         [cell.pageControl setPageControlStyle:PageControlStyleWithPageNumber];
         [cell.pageControl setNumberOfPages:14];
     }
-
+    else if (indexPath.section==5)
+    {
+        [cell.pageControl setPageControlStyle:PageControlStyleThumb];
+        [cell.pageControl setThumbImage:[UIImage imageNamed:@"pagecontrol-thumb-normal.png"]];
+        [cell.pageControl setSelectedThumbImage:[UIImage imageNamed:@"pagecontrol-thumb-selected.png"]];
+        [cell.pageControl setNumberOfPages:10];
+    }
     
     return cell;
 }
