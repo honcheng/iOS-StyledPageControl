@@ -52,6 +52,7 @@ typedef enum
     UIColor *strokeNormalColor, *strokeSelectedColor;
     PageControlStyle _pageControlStyle;
     int _strokeWidth, diameter, gapWidth;
+    NSMutableDictionary *thumbImageForIndex, *selectedThumbImageForIndex;
 }
 
 @property (nonatomic, retain) UIColor *coreNormalColor, *coreSelectedColor;
@@ -68,5 +69,10 @@ typedef enum
 - (int)numberOfPages;
 - (PageControlStyle)pageControlStyle;
 - (void)setPageControlStyle:(PageControlStyle)style;
+
+- (void)setThumbImage:(UIImage *)aThumbImage forIndex:(NSInteger)index;
+- (UIImage *)thumbImageForIndex:(NSInteger)index;
+- (void)setSelectedThumbImage:(UIImage *)aSelectedThumbImage forIndex:(NSInteger)index;
+- (UIImage *)selectedThumbImageForIndex:(NSInteger)index;
 
 @end

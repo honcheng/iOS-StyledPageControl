@@ -281,15 +281,18 @@
         }
         else if (self.pageControlStyle==PageControlStyleThumb)
         {
-            if (self.thumbImage && self.selectedThumbImage)
+            UIImage* aThumbImage = [self thumbImageForIndex:i];
+            UIImage* aSelectedThumbImage = [self selectedThumbImageForIndex:i];
+            
+            if (aThumbImage && aSelectedThumbImage)
             {
                 if (i==_currentPage)
                 {
-                    [self.selectedThumbImage drawInRect:CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter)];
+                    [aSelectedThumbImage drawInRect:CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter)];
                 }
                 else
                 {
-                    [self.thumbImage drawInRect:CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter)];
+                    [aThumbImage drawInRect:CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter)];
                 }
             }
         }
@@ -340,5 +343,46 @@
     return self._numberOfPages;
 }
 
+- (void)setThumbImage:(UIImage *)aThumbImage forIndex:(NSInteger)index {
+    if (thumbImageForIndex == nil) {
+        thumbImageForIndex = [[NSMutableDictionary alloc] init];
+    }
+    
+    if ((aThumbImage != nil))
+        [thumbImageForIndex setObject:aThumbImage forKey:[NSNumber numberWithInteger:index]];
+    else
+        [thumbImageForIndex removeObjectForKey:[NSNumber numberWithInteger:index]];
+    
+    [self setNeedsDisplay];
+}
+
+- (UIImage *)thumbImageForIndex:(NSInteger)index {
+    UIImage* aThumbImage = [thumbImageForIndex objectForKey:[NSNumber numberWithInteger:index]];
+    if (aThumbImage == nil)
+        aThumbImage = thumbImage;
+    
+    return aThumbImage;
+}
+
+- (void)setSelectedThumbImage:(UIImage *)aSelectedThumbImage forIndex:(NSInteger)index {
+    if (selectedThumbImageForIndex == nil) {
+        selectedThumbImageForIndex = [[NSMutableDictionary alloc] init];
+    }
+    
+    if ((aSelectedThumbImage != nil))
+        [selectedThumbImageForIndex setObject:aSelectedThumbImage forKey:[NSNumber numberWithInteger:index]];
+    else
+        [selectedThumbImageForIndex removeObjectForKey:[NSNumber numberWithInteger:index]];
+    
+    [self setNeedsDisplay];
+}
+
+- (UIImage *)selectedThumbImageForIndex:(NSInteger)index {
+    UIImage* aSelectedThumbImage = [selectedThumbImageForIndex objectForKey:[NSNumber numberWithInteger:index]];
+    if (aSelectedThumbImage == nil)
+        aSelectedThumbImage = selectedThumbImage;
+    
+    return aSelectedThumbImage;
+}
 
 @end
