@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 
 
-@interface PageControlDemoListViewController : UITableViewController {
-    
-}
-
+@interface PageControlDemoListViewController : UITableViewController
 @end

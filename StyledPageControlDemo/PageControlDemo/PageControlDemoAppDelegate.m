@@ -19,9 +19,9 @@
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
     
-    PageControlDemoListViewController *demoList = [[[PageControlDemoListViewController alloc] init] autorelease];
+    PageControlDemoListViewController *demoList = [[PageControlDemoListViewController alloc] init];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:demoList];
-    [_window addSubview:navController.view];
+    [_window setRootViewController:navController];
     
     return YES;
 }
@@ -65,10 +65,5 @@
      */
 }
 
-- (void)dealloc
-{
-    [_window release];
-    [super dealloc];
-}
 
 @end

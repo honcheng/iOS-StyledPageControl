@@ -22,10 +22,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -158,7 +154,7 @@
     PageControlDemoTableViewCell *cell = (PageControlDemoTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) 
     {
-        cell = [[[PageControlDemoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[PageControlDemoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     [cell.pageControl setNumberOfPages:10];
     [cell.pageControl setCurrentPage:5];

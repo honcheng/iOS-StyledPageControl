@@ -10,9 +10,5 @@
 
 @implementation PageControlDemoAppDelegate_iPhone
 
-- (void)dealloc
-{
-	[super dealloc];
-}
 
 @end

@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "StyledPageControl.h"
 
-@interface PageControlDemoTableViewCell : UITableViewCell {
-    StyledPageControl *pageControl;
-}
-
-@property (nonatomic, retain) StyledPageControl *pageControl;
+@interface PageControlDemoTableViewCell : UITableViewCell
+@property (nonatomic) StyledPageControl *pageControl;
 
 @end

@@ -10,7 +10,7 @@
 
 
 @implementation PageControlDemoTableViewCell
-@synthesize pageControl;
+@synthesize pageControl = _pageControl;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -18,10 +18,9 @@
     if (self) {
         // Initialization code
         
-        self.pageControl = [[StyledPageControl alloc] initWithFrame:CGRectZero];
-        [self.pageControl setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-        [self.contentView addSubview:self.pageControl];
-        [self.pageControl release];
+        _pageControl = [[StyledPageControl alloc] initWithFrame:CGRectZero];
+        [_pageControl setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+        [self.contentView addSubview:_pageControl];
         
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
@@ -41,9 +40,5 @@
     // Configure the view for the selected state
 }
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 @end
