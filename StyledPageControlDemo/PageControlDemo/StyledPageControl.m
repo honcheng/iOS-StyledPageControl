@@ -58,18 +58,29 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
-        [self setBackgroundColor:[UIColor clearColor]];
-        
-        _strokeWidth = 2;
-        _gapWidth = 10;
-        _diameter = 12;
-        _pageControlStyle = PageControlStyleDefault;
-        
-        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapped:)];
-        [self addGestureRecognizer:tapGestureRecognizer];
+        [self setup];
+       
     }
     return self;
+}
+-(id)initWithCoder:(NSCoder *)aDecoder{
+	self=[super initWithCoder:aDecoder];
+	if (self) {
+		[self setup];
+	}
+	return self;
+}
+
+-(void)setup{
+	[self setBackgroundColor:[UIColor clearColor]];
+	
+	_strokeWidth = 2;
+	_gapWidth = 10;
+	_diameter = 12;
+	_pageControlStyle = PageControlStyleDefault;
+	
+	UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapped:)];
+	[self addGestureRecognizer:tapGestureRecognizer];
 }
 
 - (void)onTapped:(UITapGestureRecognizer*)gesture
