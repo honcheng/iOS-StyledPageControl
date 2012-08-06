@@ -13,5 +13,8 @@ StyledPageControl is a replacement for UIPageControl for iOS, but more customiza
 * change stroke width
 * show current page number
 
+#### Minimum Requirements
+XCode 4.4 because it uses auto-synthesis
+
 [twitter.com/honcheng](http://twitter.com/honcheng)
 

@@ -37,21 +37,6 @@
 
 
 @implementation StyledPageControl
-@synthesize currentPage = _currentPage;
-@synthesize numberOfPages = _numberOfPages;
-@synthesize hidesForSinglePage = _hidesForSinglePage;
-@synthesize coreNormalColor = _coreNormalColor;
-@synthesize coreSelectedColor = _coreSelectedColor;
-@synthesize strokeNormalColor = _strokeNormalColor;
-@synthesize strokeSelectedColor = _strokeSelectedColor;
-@synthesize pageControlStyle = _pageControlStyle;
-@synthesize strokeWidth = _strokeWidth;
-@synthesize diameter = _diameter;
-@synthesize gapWidth = _gapWidth;
-@synthesize thumbImage = _thumbImage;
-@synthesize selectedThumbImage = _selectedThumbImage;
-@synthesize thumbImageForIndex = _thumbImageForIndex;
-@synthesize selectedThumbImageForIndex = _selectedThumbImageForIndex;
 
 #define COLOR_GRAYISHBLUE [UIColor colorWithRed:128/255.0 green:130/255.0 blue:133/255.0 alpha:1]
 #define COLOR_GRAY [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]
@@ -333,13 +318,6 @@
 	}
 }
 
-
-
-- (PageControlStyle)pageControlStyle
-{
-    return _pageControlStyle;
-}
-
 - (void)setPageControlStyle:(PageControlStyle)style
 {
     _pageControlStyle = style;
@@ -352,20 +330,10 @@
     [self setNeedsDisplay];
 }
 
-- (int)currentPage
-{
-    return _currentPage;
-}
-
 - (void)setNumberOfPages:(int)numOfPages
 {
     _numberOfPages = numOfPages;
     [self setNeedsDisplay];
-}
-
-- (int)numberOfPages
-{
-    return _numberOfPages;
 }
 
 - (void)setThumbImage:(UIImage *)aThumbImage forIndex:(NSInteger)index {

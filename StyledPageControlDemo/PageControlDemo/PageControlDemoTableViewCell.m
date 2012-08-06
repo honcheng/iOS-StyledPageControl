@@ -10,7 +10,6 @@
 
 
 @implementation PageControlDemoTableViewCell
-@synthesize pageControl = _pageControl;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

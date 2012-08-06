@@ -10,5 +10,4 @@
 
 @interface PageControlDemoAppDelegate : NSObject <UIApplicationDelegate>
 @property (nonatomic) IBOutlet UIWindow *window;
-
 @end

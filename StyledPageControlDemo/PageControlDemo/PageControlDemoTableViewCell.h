@@ -11,5 +11,4 @@
 
 @interface PageControlDemoTableViewCell : UITableViewCell
 @property (nonatomic) StyledPageControl *pageControl;
-
 @end

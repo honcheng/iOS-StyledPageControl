@@ -55,13 +55,6 @@ typedef enum
 @property (nonatomic) UIImage *thumbImage, *selectedThumbImage;
 @property (nonatomic) NSMutableDictionary *thumbImageForIndex, *selectedThumbImageForIndex;
 
-- (void)setCurrentPage:(int)page;
-- (int)currentPage;
-- (void)setNumberOfPages:(int)numOfPages;
-- (int)numberOfPages;
-- (PageControlStyle)pageControlStyle;
-- (void)setPageControlStyle:(PageControlStyle)style;
-
 - (void)setThumbImage:(UIImage *)aThumbImage forIndex:(NSInteger)index;
 - (UIImage *)thumbImageForIndex:(NSInteger)index;
 - (void)setSelectedThumbImage:(UIImage *)aSelectedThumbImage forIndex:(NSInteger)index;
