@@ -8,10 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PageControlDemoAppDelegate : NSObject <UIApplicationDelegate> {
-
-}
-
+@interface PageControlDemoAppDelegate : NSObject <UIApplicationDelegate>
 @property (nonatomic) IBOutlet UIWindow *window;
 
 @end

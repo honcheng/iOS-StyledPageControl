@@ -374,15 +374,15 @@
     }
     
     if ((aThumbImage != nil))
-        [self.thumbImageForIndex setObject:aThumbImage forKey:[NSNumber numberWithInteger:index]];
+        [self.thumbImageForIndex setObject:aThumbImage forKey:@(index)];
     else
-        [self.thumbImageForIndex removeObjectForKey:[NSNumber numberWithInteger:index]];
+        [self.thumbImageForIndex removeObjectForKey:@(index)];
     
     [self setNeedsDisplay];
 }
 
 - (UIImage *)thumbImageForIndex:(NSInteger)index {
-    UIImage* aThumbImage = [self.thumbImageForIndex objectForKey:[NSNumber numberWithInteger:index]];
+    UIImage* aThumbImage = [self.thumbImageForIndex objectForKey:@(index)];
     if (aThumbImage == nil)
         aThumbImage = self.thumbImage;
     
@@ -395,15 +395,15 @@
     }
     
     if ((aSelectedThumbImage != nil))
-        [self.selectedThumbImageForIndex setObject:aSelectedThumbImage forKey:[NSNumber numberWithInteger:index]];
+        [self.selectedThumbImageForIndex setObject:aSelectedThumbImage forKey:@(index)];
     else
-        [self.selectedThumbImageForIndex removeObjectForKey:[NSNumber numberWithInteger:index]];
+        [self.selectedThumbImageForIndex removeObjectForKey:@(index)];
     
     [self setNeedsDisplay];
 }
 
 - (UIImage *)selectedThumbImageForIndex:(NSInteger)index {
-    UIImage* aSelectedThumbImage = [self.selectedThumbImageForIndex objectForKey:[NSNumber numberWithInteger:index]];
+    UIImage* aSelectedThumbImage = [self.selectedThumbImageForIndex objectForKey:@(index)];
     if (aSelectedThumbImage == nil)
         aSelectedThumbImage = self.selectedThumbImage;
     
