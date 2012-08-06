@@ -53,6 +53,7 @@ typedef enum
 @property (nonatomic, assign) PageControlStyle pageControlStyle;
 @property (nonatomic, assign) int strokeWidth, diameter, gapWidth;
 @property (nonatomic) UIImage *thumbImage, *selectedThumbImage;
+@property (nonatomic) NSMutableDictionary *thumbImageForIndex, *selectedThumbImageForIndex;
 
 - (void)setCurrentPage:(int)page;
 - (int)currentPage;
@@ -60,5 +61,10 @@ typedef enum
 - (int)numberOfPages;
 - (PageControlStyle)pageControlStyle;
 - (void)setPageControlStyle:(PageControlStyle)style;
+
+- (void)setThumbImage:(UIImage *)aThumbImage forIndex:(NSInteger)index;
+- (UIImage *)thumbImageForIndex:(NSInteger)index;
+- (void)setSelectedThumbImage:(UIImage *)aSelectedThumbImage forIndex:(NSInteger)index;
+- (UIImage *)selectedThumbImageForIndex:(NSInteger)index;
 
 @end

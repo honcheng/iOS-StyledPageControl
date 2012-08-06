@@ -50,6 +50,8 @@
 @synthesize gapWidth = _gapWidth;
 @synthesize thumbImage = _thumbImage;
 @synthesize selectedThumbImage = _selectedThumbImage;
+@synthesize thumbImageForIndex = _thumbImageForIndex;
+@synthesize selectedThumbImageForIndex = _selectedThumbImageForIndex;
 
 #define COLOR_GRAYISHBLUE [UIColor colorWithRed:128/255.0 green:130/255.0 blue:133/255.0 alpha:1]
 #define COLOR_GRAY [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]
@@ -90,18 +92,32 @@
     if (touchPoint.x < self.frame.size.width/2)
     {
         // move left
-        if (_currentPage>0)
+        if (self.currentPage>0)
         {
-            _currentPage -= 1;
+            if (touchPoint.x <= 22)
+            {
+                self.currentPage = 0;
+            }
+            else
+            {
+                self.currentPage -= 1;
+            }
         }
         
     }
     else
     {
         // move right
-        if (_currentPage<_numberOfPages-1)
+        if (self.currentPage<self.numberOfPages-1)
         {
-            _currentPage += 1;
+            if (touchPoint.x >= (CGRectGetWidth(self.bounds) - 22))
+            {
+                self.currentPage = self.numberOfPages-1;
+            }
+            else
+            {
+                self.currentPage += 1;
+            }
         }
     }
     [self setNeedsDisplay];
@@ -299,15 +315,18 @@
         }
         else if (self.pageControlStyle==PageControlStyleThumb)
         {
-            if (_thumbImage && _selectedThumbImage)
+            UIImage* aThumbImage = [self thumbImageForIndex:i];
+            UIImage* aSelectedThumbImage = [self selectedThumbImageForIndex:i];
+            
+            if (aThumbImage && aSelectedThumbImage)
             {
                 if (i==_currentPage)
                 {
-                    [_selectedThumbImage drawInRect:CGRectMake(x,(self.frame.size.height-diameter)/2,diameter,diameter)];
+                    [aSelectedThumbImage drawInRect:CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter)];
                 }
                 else
                 {
-                    [_thumbImage drawInRect:CGRectMake(x,(self.frame.size.height-diameter)/2,diameter,diameter)];
+                    [aThumbImage drawInRect:CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter)];
                 }
             }
         }
@@ -349,5 +368,46 @@
     return _numberOfPages;
 }
 
+- (void)setThumbImage:(UIImage *)aThumbImage forIndex:(NSInteger)index {
+    if (self.thumbImageForIndex == nil) {
+        [self setThumbImageForIndex:[NSMutableDictionary dictionary]];
+    }
+    
+    if ((aThumbImage != nil))
+        [self.thumbImageForIndex setObject:aThumbImage forKey:[NSNumber numberWithInteger:index]];
+    else
+        [self.thumbImageForIndex removeObjectForKey:[NSNumber numberWithInteger:index]];
+    
+    [self setNeedsDisplay];
+}
+
+- (UIImage *)thumbImageForIndex:(NSInteger)index {
+    UIImage* aThumbImage = [self.thumbImageForIndex objectForKey:[NSNumber numberWithInteger:index]];
+    if (aThumbImage == nil)
+        aThumbImage = self.thumbImage;
+    
+    return aThumbImage;
+}
+
+- (void)setSelectedThumbImage:(UIImage *)aSelectedThumbImage forIndex:(NSInteger)index {
+    if (self.selectedThumbImageForIndex == nil) {
+        [self setSelectedThumbImageForIndex:[NSMutableDictionary dictionary]];
+    }
+    
+    if ((aSelectedThumbImage != nil))
+        [self.selectedThumbImageForIndex setObject:aSelectedThumbImage forKey:[NSNumber numberWithInteger:index]];
+    else
+        [self.selectedThumbImageForIndex removeObjectForKey:[NSNumber numberWithInteger:index]];
+    
+    [self setNeedsDisplay];
+}
+
+- (UIImage *)selectedThumbImageForIndex:(NSInteger)index {
+    UIImage* aSelectedThumbImage = [self.selectedThumbImageForIndex objectForKey:[NSNumber numberWithInteger:index]];
+    if (aSelectedThumbImage == nil)
+        aSelectedThumbImage = self.selectedThumbImage;
+    
+    return aSelectedThumbImage;
+}
 
 @end
