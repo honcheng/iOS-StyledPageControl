@@ -3,7 +3,7 @@ Customizable PageControl for iOS
 
 <img src="https://github.com/honcheng/iOS-StyledPageControl/raw/master/screenshot.png"/>
 
-StyledPageControl is made work like UIPageControl in iOS, but more customizable.
+StyledPageControl is a replacement for UIPageControl for iOS, but more customizable. 
 
 #### Features
 * 5 Styles
