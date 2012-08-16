@@ -307,11 +307,11 @@
             {
                 if (i==_currentPage)
                 {
-                    [aSelectedThumbImage drawInRect:CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter)];
+                    [aSelectedThumbImage drawInRect:CGRectMake(x,(self.frame.size.height-aSelectedThumbImage.size.height)/2,aSelectedThumbImage.size.width,aSelectedThumbImage.size.height)];
                 }
                 else
                 {
-                    [aThumbImage drawInRect:CGRectMake(x,(self.frame.size.height-_diameter)/2,_diameter,_diameter)];
+                    [aThumbImage drawInRect:CGRectMake(x,(self.frame.size.height-aThumbImage.size.height)/2,aThumbImage.size.width,aThumbImage.size.height)];
                 }
             }
         }
