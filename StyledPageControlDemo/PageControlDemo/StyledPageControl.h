@@ -42,7 +42,8 @@ typedef enum
     PageControlStylePressed1 = 2,
     PageControlStylePressed2 = 3,
     PageControlStyleWithPageNumber = 4,
-    PageControlStyleThumb = 5
+    PageControlStyleThumb = 5,
+    PageControlStyleStrokedSquare = 6,
 } PageControlStyle;
 
 @interface StyledPageControl : UIControl
