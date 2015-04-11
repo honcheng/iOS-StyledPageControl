@@ -168,7 +168,7 @@
 	
 	CGContextRef myContext = UIGraphicsGetCurrentContext();
 	
-	int gap = self.gapWidth;
+	NSInteger gap = self.gapWidth;
     float diameter = self.diameter - 2*self.strokeWidth;
     
     if (self.pageControlStyle==PageControlStyleThumb)
@@ -179,7 +179,7 @@
         }
     }
 	
-	int total_width = self.numberOfPages*diameter + (self.numberOfPages-1)*gap;
+	NSInteger total_width = self.numberOfPages*diameter + (self.numberOfPages-1)*gap;
 	
 	if (total_width>self.frame.size.width)
 	{
@@ -340,13 +340,13 @@
     [self setNeedsDisplay];
 }
 
-- (void)setCurrentPage:(int)page
+- (void)setCurrentPage:(NSInteger)page
 {
     _currentPage = page;
     [self setNeedsDisplay];
 }
 
-- (void)setNumberOfPages:(int)numOfPages
+- (void)setNumberOfPages:(NSInteger)numOfPages
 {
     _numberOfPages = numOfPages;
     [self setNeedsDisplay];

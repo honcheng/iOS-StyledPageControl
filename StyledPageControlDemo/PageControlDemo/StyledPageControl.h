@@ -49,10 +49,10 @@ typedef enum
 @interface StyledPageControl : UIControl
 @property (nonatomic) UIColor *coreNormalColor, *coreSelectedColor;
 @property (nonatomic) UIColor *strokeNormalColor, *strokeSelectedColor;
-@property (nonatomic, assign) int currentPage, numberOfPages;
+@property (nonatomic, assign) NSInteger currentPage, numberOfPages;
 @property (nonatomic, assign) BOOL hidesForSinglePage;
 @property (nonatomic, assign) PageControlStyle pageControlStyle;
-@property (nonatomic, assign) int strokeWidth, diameter, gapWidth;
+@property (nonatomic, assign) NSInteger strokeWidth, diameter, gapWidth;
 @property (nonatomic) UIImage *thumbImage, *selectedThumbImage;
 @property (nonatomic) NSMutableDictionary *thumbImageForIndex, *selectedThumbImageForIndex;
 
